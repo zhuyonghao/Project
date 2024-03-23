@@ -6,42 +6,54 @@
 #ifndef MENU_H
 #define MENU_H
 
+#include <iostream>
 #include <string>
-
-static size_t number = 1;
+#include <vector>
+#include "dishInfo.hpp"
 
 class Menu
 {
 public:
-    Menu(
-        std::string NAME,
-        double PRICE,
-        int QUANTITY,
-        double DISCOUNT);
+    static Menu *getMenu();
 
-    ~Menu()
-    {
-        --number;
-    }
-
-    void outfileMenu(std::string fileName);
     void displayMenu();
 
+    // void outfileMenu(std::string fileName);
+
+    // declare as a reference before modification
+    std::vector<DishInfo> &getDishInfo() { return menu; };
+
 private:
-    size_t number;
-    std::string name;
-    double price;
-    int quantity;
-    double discount;
+    static Menu *MENU;
+    Menu() {}
+    std::vector<DishInfo> menu;
 };
 
-Menu::Menu(
-    std::string NAME,
-    double PRICE,
-    int QUANTITY,
-    double DISCOUNT) : name(NAME), price(PRICE), quantity(QUANTITY), discount(DISCOUNT)
+Menu *Menu::MENU = nullptr;
+
+Menu *Menu::getMenu()
 {
-    ++number;
+    if (MENU == nullptr)
+        MENU = new Menu();
+    return MENU;
+}
+
+void Menu::displayMenu()
+{
+    std::cout << "\nnumber" << '\t'
+              << "name" << '\t'
+              << "price" << '\t'
+              << "quantity" << '\t'
+              << "discount" << '\n';
+
+    for (const DishInfo &dishInfo : menu)
+        std::cout
+            << dishInfo.getNumber() << '\t'
+            << dishInfo.getName() << '\t'
+            << dishInfo.getPrice() << '\t'
+            << dishInfo.getQuantity() << "\t\t"
+            << dishInfo.getDiscount() << '\n';
+    std::cout << "\n\n";
 }
 
 #endif

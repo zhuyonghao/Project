@@ -6,4 +6,6 @@
 
 int main()
 {
+    UserInterface ui("zyh", "123", "lsj");
+    ui.determineIdentity();
 }

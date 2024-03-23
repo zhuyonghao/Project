@@ -12,19 +12,17 @@
 class Customer
 {
 public:
-    Customer(std::string name) : customerName(name), menu(), order() {}
+    Customer(std::string name) : customerName(name) {}
     void orderFood();
 
 private:
-    Menu menu;
     Order order;
     std::string customerName;
 };
 
 void Customer::orderFood()
 {
-    menu.displayMenu();
-    order.outfileOrder(customerName);
+    order.orderDish();
     order.displayOrder();
 }
 
