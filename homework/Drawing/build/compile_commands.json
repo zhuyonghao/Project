@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/MY_CODE/hk/Project/Drawing/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/Program.dir/includes_CXX.rsp -g -o CMakeFiles\\Program.dir\\src\\main.cpp.obj -c D:\\MY_CODE\\hk\\Project\\Drawing\\src\\main.cpp",
+  "file": "D:/MY_CODE/hk/Project/Drawing/src/main.cpp",
+  "output": "CMakeFiles/Program.dir/src/main.cpp.obj"
+}
+]
