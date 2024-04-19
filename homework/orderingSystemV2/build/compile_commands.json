@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/MY_CODE/hk/Project/orderingSystemV2/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/OrderSystem.dir/includes_CXX.rsp -g -o CMakeFiles\\OrderSystem.dir\\src\\main.cpp.obj -c D:\\MY_CODE\\hk\\Project\\orderingSystemV2\\src\\main.cpp",
+  "file": "D:/MY_CODE/hk/Project/orderingSystemV2/src/main.cpp",
+  "output": "CMakeFiles/OrderSystem.dir/src/main.cpp.obj"
+}
+]
